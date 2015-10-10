@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Custom validator</title>
+<!-- O arquivo cnpj.js contém a função validarCNPJ, que
+recebe uma string e retorna true ou false. -->
+<script src="cnpj.js"></script>
+<script>
+ function vCNPJ(i){
+  i.setCustomValidity(validarCNPJ(i.value) ? "" : "CNPJ inválido!");
+ }
+ </script>
+ </head>
+ <body>
+   <form>
+     <label>CNPJ: <input name="cnpj" oninput="vCNPJ(this)" /></label>
+     <input type="submit" value="Enviar" />
+   </form>
+ </body>
+
+</html>
