@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Formulário</title>
+      <meta charset="utf-8">
+   </head>
+   <body>
+      <form>
+         <label for="CEP">CEP:  
+         <input name="CEP" id="CEP" required pattern="\d{5}-\d{3}" onchange="console.log('onchange')" oninput="console.log('oninput')" />
+         </label>
+         <input type="reset" value="Cancelar"/> 
+         <input type="submit" value="Enviar" formnovalidate /> 
+      </form>
+   </body>
+<html>
